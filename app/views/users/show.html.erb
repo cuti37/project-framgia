@@ -1,0 +1,27 @@
+<% provide(:title, @user.full_name) %>
+<div class="col-md-8">
+  <div class="profile">
+    <h1 class="page-header"><%= @user.full_name %></h1>
+    <div class="row">
+      <div class="col-md-4">
+        <%= gravatar_for @user, size: 500 %>
+      </div>
+      <div class="col-md-8">
+        <ul>
+          <li><strong>Name:</strong><%= @user.full_name %></li>
+          <li><strong>Email:</strong><%= @user.email %></li>
+          <li> <%= render "follow_form" if user_signed_in? %> </p></li>
+          <li><%= render "users/stats" %></li>
+        </ul>
+      </div>
+    </div><br><br>
+    <% if user_signed_in? && current_user == @user %>
+      <%= render "posts/post_form" %>
+    <% end %>
+    <%= render @posts %>
+    <%= will_paginate @posts %>
+  </div>
+</div>
+<div id="following-show">
+  <%= render "users/show_follow" %>
+</div>

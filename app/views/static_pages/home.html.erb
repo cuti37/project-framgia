@@ -1,0 +1,26 @@
+<% provide :title, t(".home") %>
+<!-- <h1><%= t ".static_home" %></h1>
+<p><%= t ".find_file_home" %></p> -->
+<div class="col-md-8">
+  <% if user_signed_in? %>
+  <div id="post-form">
+    <%= render "posts/post_form" %>
+  </div>
+  <% end %>
+  <div id="list-post">
+    <%= render @posts %>
+  </div>
+  <%= will_paginate @posts %>
+</div>
+<% if user_signed_in? %>
+  <div id="following-show">
+    <%= render "users/show_follow" %>
+  </div>
+  <div id= "list-tags">
+    <%= render "tags/list_tags" %>
+  </div>
+<% else %>
+  <div id= "list-tags">
+    <%= render "tags/list_tags" %>
+  </div>
+<% end %>

@@ -1,0 +1,8 @@
+<!-- <a href="#" id="btn-follow" class="btn btn-default btn-block" data-id="<%= current_user.active_relationships.find_by(followed_id: @user.id).id %>">
+    <i class="fa fa-users"></i> Unfollow
+  </a>
+</p>
+ -->
+<%= form_for(current_user.active_relationships.find_by(followed_id: @user.id), html: { method: :delete }, data: {id: @user.id}) do |f| %>
+  <%= f.submit "Unfollow", class: "btn btn-block" %>
+<% end %>

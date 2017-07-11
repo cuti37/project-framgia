@@ -1,0 +1,8 @@
+<% if @posts ==[] %>
+  <span>We cannot find anything!</span>
+<% else %>
+  <div class="col-md-8">
+    <%= render @posts %>
+  </div>
+  <%= will_paginate @posts %>
+<% end %>

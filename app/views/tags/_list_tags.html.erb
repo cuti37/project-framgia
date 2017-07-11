@@ -1,0 +1,19 @@
+<div class="col-md-4 following">
+  <div class="panel panel-default friends">
+    <div class="panel-heading">
+      <h3 class="panel-title">List Tags</h3>
+    </div>
+    <div class="panel-body">
+      <ul>
+        <% if @tags == [] %>
+          <span>Don't have tag</span>
+        <% else %>
+          <% @tags.each do |tag| %>
+            <li><%= link_to "#{tag.name} (#{tag.count_post})", tag , class: "label label-primary"  %></li>
+          <% end %>
+        <% end %>
+      </ul>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</div>

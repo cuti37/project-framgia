@@ -1,0 +1,10 @@
+<tr class="post-id-<%= post.id %>">
+  <td><%= post.id %></td>
+  <td><%= post.title %></td>
+  <td>
+  <% post.tags.each do |tag| %>
+    <%= link_to tag.name, tag ,class: "label label-primary" %>
+  <% end %>
+  </td>
+  <td><%= link_to "delete", admin_post_path(post), class: "admin-delete-post", data:{id: post.id} %></td>
+</tr>

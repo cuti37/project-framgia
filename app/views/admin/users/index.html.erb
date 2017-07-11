@@ -1,0 +1,18 @@
+<div class="container">
+  <h2>List User</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>Full name</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @users.each do |user| %>
+        <%= render user %>
+      <% end %>
+    </tbody>
+  </table>
+  <%= will_paginate @users %>
+</div>

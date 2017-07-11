@@ -1,0 +1,8 @@
+<% unless user.is_admin? %>
+  <tr class="user-id-<%= user.id %>">
+    <td><%= user.id %></td>
+    <td><%= user.full_name %></td>
+    <td><%= user.email %></td>
+    <td><%= link_to "delete", admin_user_path(user), class: "admin-delete-user", data: {id: user.id} %></td>
+</tr>
+<% end %>

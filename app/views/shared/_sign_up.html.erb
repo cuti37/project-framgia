@@ -1,0 +1,37 @@
+<div class="modal fade" id="signup" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Sign up</h4>
+      </div>
+      <div class="modal-body">
+          <%= form_for resource, as: resource_name, url: registration_path(resource_name) do |f| %>
+            <%= devise_error_messages! %>
+            <div class="field">
+              <%= f.label :full_name %><br />
+              <%= f.text_field :full_name, placeholder: "full name", autofocus: true %>
+            </div>
+            <div class="field">
+              <%= f.label :email %><br />
+              <%= f.email_field :email, placeholder: "email", autofocus: true %>
+            </div>
+            <div class="field">
+              <%= f.label :password %>
+              <% if @minimum_password_length %>
+              <em>(<%= @minimum_password_length %> <%= t ".char_min" %>)</em>
+              <% end %><br />
+              <%= f.password_field :password, placeholder: "password", autocomplete: "off" %>
+            </div>
+            <div class="field">
+              <%= f.label :password_confirmation %><br />
+              <%= f.password_field :password_confirmation, placeholder: "password confirm",autocomplete: "off" %>
+            </div>
+            <div class="actions">
+              <%= f.submit t(".sign_up") %>
+            </div>
+          <% end %>
+      </div>
+    </div>
+  </div>
+</div>

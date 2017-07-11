@@ -1,0 +1,7 @@
+<div class="form-group">
+  <%= form_for [comment.post, comment], html: {class: "update-comment-form"}, data: {id: comment.id}, method: :patch do |f| %>
+    <div class="form-group">
+      <%= f.text_field :content, class: "form-control", value: comment.content %>
+    </div>
+  <% end %>
+</div>

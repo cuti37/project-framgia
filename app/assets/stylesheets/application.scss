@@ -1,0 +1,16 @@
+//= require_tree .
+//= require_self
+//= require ekko-lightbox
+//= require font-awesome
+//= require toastr
+//= require selectize.default
+//= require bootstrap-social.min
+//= require social-share-button
+$size: 24px;
+.social-share-button {
+  .ssb-icon {
+    background-size: $size $size;
+    height: $size;
+    width: $size;
+  }
+}

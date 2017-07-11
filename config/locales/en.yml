@@ -1,0 +1,36 @@
+en:
+  layouts:
+    footer:
+      copy_right: "Copy right: HieuNM"
+    header:
+      email_address: "Email address"
+      password: "Password"
+      sign_in: "Sign in"
+      remember_me: "Remember me"
+      enter_email: "Enter email"
+    nav:
+      home: "Home"
+      members: "Members"
+      profile: "Profile"
+  static_pages:
+    help:
+      static_help: "StaticPages#help"
+      find_file_help: "Find me in app/views/static_pages/help.html.erb"
+      help: "Help"
+    home:
+      static_home: "StaticPages#home"
+      find_file_home: "Find me in app/views/static_pages/home.html.erb"
+      home: "Home"
+  helpers:
+    application:
+      app: "Framgia Project 2"
+  shared:
+    sign_up:
+      sign_up: "Sign up"
+      char_min: "characters minimum"
+    sign_in:
+      login: "Log in"
+  devise:
+    registrations:
+      edit:
+        current_waiting: "Currently waiting confirmation for:"

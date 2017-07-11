@@ -1,0 +1,17 @@
+<% provide :title, t(".all_users") %>
+
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <h1 class="page-header">Members</h1>
+          <%= will_paginate %>
+            <% @users.each do |user| %>
+              <%= render user %>
+            <% end %>
+          <%= will_paginate %>
+      </div>
+    </div>
+  </div>
+</section>
+

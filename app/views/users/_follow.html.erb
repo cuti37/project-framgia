@@ -1,0 +1,9 @@
+<!-- <a href="#" id="btn-follow" class="btn btn-success btn-block" data-user-id="<%= @user.id %>">
+    <i class="fa fa-users"></i> Follow
+  </a>
+</p>
+ -->
+<%= form_for(current_user.active_relationships.build) do |f| %>
+  <div><%= hidden_field_tag :followed_id, @user.id %></div>
+  <%= f.submit "Follow", class: "btn btn-success btn-block" %>
+<% end %>

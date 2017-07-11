@@ -1,0 +1,70 @@
+<div class="col-md-10 column">
+    <div class="row clearfix">
+        <div class="col-md-3 column">
+            <div class="panel panel-default">
+                <div class="panel-heading libreStatsPanelHeading">
+                    <div class="panel-title">
+                        <span>Comments</span>
+                        <a class="fa fa-caret-down pull-right libreStatsPanelHeadingIcon" href="#activity"
+                           data-toggle="collapse"></a>
+                    </div>
+                </div>
+                <div class="panel-body libreStatsPanelBody collapse in" id="activity">
+                    <div class="row clearfix libreStatsPanelRow">
+                        <div class="col-md-8 column libreStatsPanelValueColumn">
+                            <p class="libreStatsCount"><%= @total_comments %></p>
+                            <small>Total comments</small>
+                        </div>
+                        <div class="col-md-4 column">
+                            <span class="pull-right fa fa-comments-o fa-5x libreStatsIcon"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 column">
+            <div class="panel panel-default">
+                <div class="panel-heading libreStatsPanelHeading">
+                    <div class="panel-title">
+                        <span>User</span>
+                        <a class="fa fa-caret-down pull-right libreStatsPanelHeadingIcon" href="#user"
+                           data-toggle="collapse"></a>
+                    </div>
+                </div>
+                <div class="panel-body libreStatsPanelBody collapse in" id="user">
+                    <div class="row clearfix libreStatsPanelRow">
+                        <div class="col-md-8 column libreStatsPanelValueColumn">
+                            <p class="libreStatsCount"><%= @total_users %></p>
+                            <small>Total User</small>
+                        </div>
+                        <div class="col-md-4 column">
+                            <span class="pull-right fa fa-users fa-5x libreStatsIcon"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 column">
+            <div class="panel panel-default">
+                <div class="panel-heading libreStatsPanelHeading">
+                    <div class="panel-title">
+                        <span>Posts</span>
+                        <a class="fa fa-caret-down pull-right libreStatsPanelHeadingIcon" href="#sales"
+                           data-toggle="collapse"></a>
+                    </div>
+                </div>
+                <div class="panel-body libreStatsPanelBody collapse in" id="sales">
+                    <div class="row clearfix libreStatsPanelRow">
+                        <div class="col-md-8 column libreStatsPanelValueColumn">
+                            <p class="libreStatsCount"><%= @total_posts %></p>
+                            <small>Total posts</small>
+                        </div>
+                        <div class="col-md-4 column">
+                            <span class="pull-right fa fa-sticky-note fa-5x libreStatsIcon"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

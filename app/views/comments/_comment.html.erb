@@ -1,0 +1,22 @@
+<% unless comment.id.nil? %>
+  <div class="comment-<%= comment.id %>">
+    <div class="comment">
+    <%= link_to gravatar_for(comment.user, size: 100), comment.user, class: "comment-avatar pull-left" %>
+      <div class="comment-text">
+        <p><%= comment.content %></p>
+      </div>
+      <% if (user_signed_in? && current_user == comment.user) or comment.post.user == current_user %>
+
+        <div class="comment-edit">
+          <%= link_to "edit", edit_post_comment_path(comment.post, comment), data: {comment_id: comment.id, post_id: comment.post.id}, class: "edit-comment" %>
+        </div>
+        <div class="commen-delete">
+          <%= link_to "delete", [comment.post, comment], data: {comment_id: comment.id, post_id: comment.post.id}, class: "delete-comment", method: :delete %>
+        </div>
+      <% end %>
+      <span class="timestamp">
+          Posted <%= time_ago_in_words(comment.created_at) %> ago.
+      </span>
+    </div>
+  </div>
+<% end %>

@@ -1,0 +1,15 @@
+<div class="members">
+  <div class="row member-row">
+    <div class="col-md-3">
+    <%= gravatar_for user, size: 500 %>
+      <div class="text-center">
+        <div class= "label label-success">
+          <%= user.full_name %>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <p> <%= link_to "<i class='fa fa-edit'></i> View Profile".html_safe, user, class: "btn btn-primary btn-block" %>
+    </div>
+  </div>
+</div>

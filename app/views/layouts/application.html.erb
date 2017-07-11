@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= yield(:title) %>| Framgia project 2</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbolinks-track": "reload" %>
+  </head>
+
+  <body>
+  <%= render "shared/sign_in" %>
+  <%= render "shared/sign_up" %>
+  <%= render "posts/modal" %>
+  <%= render "layouts/header" %>
+  <%= render "layouts/nav" %>
+  <section>
+    <div class="container">
+      <div class="row">
+          <%= yield %>
+      </div>
+    </div>
+  </section>
+  <%= render "layouts/footer" %>
+  </body>
+</html>
